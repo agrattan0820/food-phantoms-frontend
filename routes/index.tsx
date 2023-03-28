@@ -2,10 +2,12 @@ import Header from "../islands/Header.tsx";
 import { Handlers, PageProps } from "$fresh/server.ts";
 import { Kitchen } from "../types/kitchen.ts";
 import Search from "../islands/Search.tsx";
+import { load } from "std/dotenv/mod.ts";
 
 export const handler: Handlers<Kitchen[] | null> = {
   async GET(_, ctx) {
-    const resp = await fetch(`http://localhost:8080/kitchens`);
+    const env = await load();
+    const resp = await fetch(`${env["API_URL"]}/kitchens`);
     if (resp.status === 404) {
       return ctx.render(null);
     }
