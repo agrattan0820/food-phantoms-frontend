@@ -5,7 +5,7 @@ export default {
   selfURL: import.meta.url,
   preflight: {
     "@import":
-      "url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300;400;500;600;700&display=swap')",
+      "url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300;400;500;600;700&display=block')",
   },
   theme: {
     extend: {
