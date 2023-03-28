@@ -23,16 +23,16 @@ export default function Home({ data }: PageProps<Kitchen[] | null>) {
     <>
       <Header />
       <main class="p-4 mx-auto max-w-screen-lg">
-        <div class="mt-16 flex items-center justify-between">
-          <div>
-            <h2 class="font-serif text-8xl mb-4">
+        <div class="flex flex-col-reverse items-center gap-6 md:(flex-row justify-between mt-16)">
+          <div class="w-full">
+            <h2 class="font-serif text-6xl sm:text-8xl mb-4">
               Is This Restaurant a Ghost Kitchen?
             </h2>
             {data && <Search kitchens={data} />}
           </div>
           <img
             src="/food-phantom.svg"
-            class="w-64"
+            class="w-32 sm:w-64"
             alt="the food phantom logo: a ghost wearing a chef's hat"
           />
         </div>
