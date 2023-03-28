@@ -7,7 +7,9 @@ import { load } from "std/dotenv/mod.ts";
 export const handler: Handlers<Kitchen[] | null> = {
   async GET(_, ctx) {
     const env = await load();
-    const resp = await fetch(`${env["API_URL"]}/kitchens`);
+    const resp = await fetch(
+      `${env["API_URL"] ?? Deno.env.get("API_URL")}/kitchens`
+    );
     if (resp.status === 404) {
       return ctx.render(null);
     }
