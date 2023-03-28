@@ -19,8 +19,6 @@ export const handler: Handlers<Kitchen[] | null> = {
 };
 
 export default function Home({ data }: PageProps<Kitchen[] | null>) {
-  console.log(data);
-
   return (
     <>
       <Header />
