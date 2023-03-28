@@ -19,7 +19,7 @@ export default function Search({ kitchens }: SearchProps) {
 
   const searchResults = useMemo(() => {
     return kitchens.filter((kitchen) => {
-      return kitchen.name.toLowerCase().includes(input);
+      return kitchen.name.toLowerCase().includes(input.toLowerCase());
     });
   }, [kitchens, input]);
 
