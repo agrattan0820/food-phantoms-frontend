@@ -83,7 +83,7 @@ export default function KitchenDetailsPage({
                   - {typeMap[data?.kitchen.type].definition}
                 </p>
                 {data?.runs_in && data?.runs_in.length > 0 && (
-                  <p>
+                  <p class="mb-4">
                     Runs out of
                     {data?.runs_in.length === 1 ? (
                       <>
@@ -93,7 +93,8 @@ export default function KitchenDetailsPage({
                           class="font-bold hover:underline focus-visible:underline"
                         >
                           {data.runs_in[0].name}
-                        </a>
+                        </a>{" "}
+                        locations
                       </>
                     ) : (
                       <>
