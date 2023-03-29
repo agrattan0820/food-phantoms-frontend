@@ -6,8 +6,9 @@ export interface Kitchen {
   logo: string | null;
   description: string | null;
   website_link: string | null;
+  doordash_link: string | null;
   parent_id: number | null;
-  type: string;
+  type: "virtual" | "ghost";
   slug: string;
   parent_name: string | null;
   parent_link: string | null;

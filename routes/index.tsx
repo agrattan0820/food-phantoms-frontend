@@ -1,8 +1,10 @@
-import Header from "../islands/Header.tsx";
 import { Handlers, PageProps } from "$fresh/server.ts";
-import { Kitchen } from "../types/kitchen.ts";
-import Search from "../islands/Search.tsx";
 import { load } from "std/dotenv/mod.ts";
+
+import Header from "../islands/Header.tsx";
+import Search from "../islands/Search.tsx";
+
+import { Kitchen } from "../types/kitchen.ts";
 
 export const handler: Handlers<Kitchen[] | null> = {
   async GET(_, ctx) {
