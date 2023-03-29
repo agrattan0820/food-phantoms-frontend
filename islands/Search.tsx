@@ -26,10 +26,13 @@ export default function Search({ kitchens }: SearchProps) {
   return (
     <form class="group relative w-full max-w-xl z-10">
       <div class="relative z-10 flex items-center border(black 2) rounded-lg px-6 bg-white">
-        <IconSearch class="relative w-6 h-6" />
+        <label for="search">
+          <IconSearch class="relative w-6 h-6" />
+        </label>
         <input
           class="relative w-full px-4 py-3 md:text-2xl outline-none"
           type="text"
+          id="search"
           name="search"
           value={input}
           onInput={handleOnInput}
