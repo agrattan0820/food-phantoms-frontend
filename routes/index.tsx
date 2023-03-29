@@ -34,7 +34,7 @@ export default function Home({ data }: PageProps<Kitchen[] | null>) {
           </div>
           <img
             src="/food-phantom.svg"
-            class="w-32 sm:w-64"
+            class="w-32 sm:w-64 ghost-animation"
             alt="the food phantom logo: a ghost wearing a chef's hat"
           />
         </div>
