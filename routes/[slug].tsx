@@ -75,7 +75,7 @@ export default function KitchenDetailsPage({
                 </h2>
                 <p class="mb-4">
                   <a
-                    class="font-bold hover:underline"
+                    class="font-bold hover:underline focus-visible:underline"
                     href={typeMap[data?.kitchen.type].link}
                   >
                     {typeMap[data?.kitchen.type].label}
@@ -90,7 +90,7 @@ export default function KitchenDetailsPage({
                         {" "}
                         <a
                           href={data?.runs_in[0].website_link}
-                          class="font-bold hover:underline"
+                          class="font-bold hover:underline focus-visible:underline"
                         >
                           {data.runs_in[0].name}
                         </a>
@@ -114,7 +114,7 @@ export default function KitchenDetailsPage({
                     Owned by{" "}
                     <a
                       href={data?.kitchen.parent_link ?? ""}
-                      class="font-bold hover:underline"
+                      class="font-bold hover:underline focus-visible:underline"
                     >
                       {data?.kitchen.parent_name ?? ""}
                     </a>
@@ -136,21 +136,36 @@ export default function KitchenDetailsPage({
               {data?.locations && data?.locations.length > 0 && (
                 <div class="rounded-lg border-2 border-black flex-1 mx-auto max-w-xl">
                   <ul class="p-8 space-y-8">
-                    {data?.locations.map((location, i) => (
-                      <li
-                        key={i}
-                        class="flex justify-between items-center gap-2"
-                      >
-                        <p>
-                          {location?.address_1}, {location?.city},{" "}
-                          {location?.state} {location?.zip_code}
-                        </p>
-                        <span class="flex">
-                          <IconStar class="w-6 h-6 mr-1" />
-                          {location?.google_rating.toFixed(1)}
-                        </span>
-                      </li>
-                    ))}
+                    {data?.locations.map((location, i) => {
+                      const googleLink = `https://www.google.com/search?q=${[
+                        data?.kitchen.name,
+                        location?.address_1,
+                        location?.city,
+                        location?.state,
+                        location?.zip_code,
+                      ].join("+")}`;
+                      return (
+                        <li
+                          key={i}
+                          class="flex justify-between items-center gap-2"
+                        >
+                          <a
+                            href={googleLink}
+                            class="hover:underline focus-visible:underline"
+                          >
+                            {location?.address_1}, {location?.city},{" "}
+                            {location?.state} {location?.zip_code}
+                          </a>
+                          <a
+                            class="flex hover:underline focus-visible:underline"
+                            href={googleLink}
+                          >
+                            <IconStar class="w-6 h-6 mr-1" />
+                            {location?.google_rating.toFixed(1)}
+                          </a>
+                        </li>
+                      );
+                    })}
                   </ul>
                 </div>
               )}
