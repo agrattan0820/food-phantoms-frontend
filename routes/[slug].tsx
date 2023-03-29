@@ -157,15 +157,13 @@ export default function KitchenDetailsPage({
                             {location?.address_1}, {location?.city},{" "}
                             {location?.state} {location?.zip_code}
                           </a>
-                          {location?.google_rating && (
-                            <a
-                              class="flex hover:underline focus-visible:underline"
-                              href={googleLink}
-                            >
-                              <IconStar class="w-6 h-6 mr-1" />
-                              {location?.google_rating.toFixed(1)}
-                            </a>
-                          )}
+                          <a
+                            class="flex hover:underline focus-visible:underline"
+                            href={googleLink}
+                          >
+                            <IconStar class="w-6 h-6 mr-1" />
+                            {location?.google_rating?.toFixed(1) ?? "N/A"}
+                          </a>
                         </li>
                       );
                     })}
