@@ -14,7 +14,9 @@ export const handler: Handlers<Kitchen | null> = {
   },
 };
 
-export default function Kitchen({ data }: PageProps<Kitchen[] | null>) {
+export default function KitchenDetailsPage({
+  data,
+}: PageProps<Kitchen[] | null>) {
   return (
     <div>
       <pre>{JSON.stringify(data, null, 4)}</pre>
