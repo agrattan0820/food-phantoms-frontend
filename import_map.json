@@ -1,6 +1,6 @@
 {
   "imports": {
-    "std/": "https://deno.land/std@0.177.0/",
+    "std/": "https://deno.land/std@0.181.0/",
     "tabler/": "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/",
     "$fresh/": "https://deno.land/x/fresh@1.1.4/",
     "preact": "https://esm.sh/preact@10.11.0",
