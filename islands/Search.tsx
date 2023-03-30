@@ -1,9 +1,9 @@
 import { useMemo, useState } from "preact/hooks";
 import { JSX } from "preact/jsx-runtime";
-import { Button } from "../components/Button.tsx";
 import { Kitchen } from "../types/kitchen.ts";
 import { IS_BROWSER } from "$fresh/runtime.ts";
 import IconSearch from "tabler/search.tsx";
+import { SearchInput } from "../components/Input.tsx";
 
 interface SearchProps {
   kitchens: Kitchen[];
@@ -29,8 +29,7 @@ export default function Search({ kitchens }: SearchProps) {
         <label for="search">
           <IconSearch class="relative w-6 h-6" />
         </label>
-        <input
-          class="relative w-full px-4 py-3 md:text-2xl outline-none search-input"
+        <SearchInput
           type="text"
           id="search"
           name="search"

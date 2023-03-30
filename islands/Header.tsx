@@ -1,4 +1,4 @@
-import { Button } from "../components/Button.tsx";
+import { LinkButton } from "../components/Button.tsx";
 import IconPlus from "tabler/plus.tsx";
 
 export default function Header() {
@@ -7,9 +7,9 @@ export default function Header() {
       <h1 class="font-serif py-1 text-xl md:text-3xl">
         <a href="/">Food Phantoms</a>
       </h1>
-      <Button>
+      <LinkButton href="/add-kitchen">
         Add a Location <IconPlus />
-      </Button>
+      </LinkButton>
     </div>
   );
 }
