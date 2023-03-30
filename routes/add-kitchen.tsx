@@ -37,17 +37,15 @@ export const handler: Handlers<Data | null> = {
       }
     );
 
+    const url = new URL(req.url);
+    url.href = url.origin + "/";
+    url.pathname = "/add-kitchen";
+
     if (postLocation.ok) {
-      const url = new URL(req.url);
-      url.href = url.origin + "/";
-      url.pathname = "/add-kitchen";
       url.searchParams.append("success", "true");
       return Response.redirect(url, 303);
     }
 
-    const url = new URL(req.url);
-    url.href = url.origin + "/";
-    url.pathname = "/add-kitchen";
     url.searchParams.append("success", "false");
     return Response.redirect(url, 303);
   },
