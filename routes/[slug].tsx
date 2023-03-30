@@ -83,14 +83,14 @@ export default function KitchenDetailsPage({
                   - {typeMap[data?.kitchen.type].definition}
                 </p>
                 {data?.runs_in && data?.runs_in.length > 0 && (
-                  <p class="mb-4">
+                  <p>
                     Runs out of
                     {data?.runs_in.length === 1 ? (
                       <>
                         {" "}
                         <a
                           href={data?.runs_in[0].website_link}
-                          class="font-bold hover:underline focus-visible:underline"
+                          class="inline-block font-bold hover:underline focus-visible:underline mb-4"
                         >
                           {data.runs_in[0].name}
                         </a>{" "}
@@ -98,8 +98,8 @@ export default function KitchenDetailsPage({
                       </>
                     ) : (
                       <>
-                        : <br />
-                        <ul class="list-disc list-inside">
+                        :
+                        <ul class="list-disc list-inside pl-4 mb-4">
                           {data.runs_in.map((company, i) => (
                             <li key={i}>
                               <a href={company.website_link}>{company.name}</a>
