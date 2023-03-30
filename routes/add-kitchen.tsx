@@ -119,7 +119,7 @@ export default function Home({ data }: PageProps<Data | null>) {
               </div>
               <input
                 type="submit"
-                class="px-2 py-1 flex justify-center items-center gap-0.5 text-sm md:text-base rounded-lg transition border(black 2) hover:bg-gray-100"
+                class="bg-white cursor-pointer px-2 py-1 flex justify-center items-center gap-0.5 text-sm md:text-base rounded-lg transition border(black 2) hover:bg-gray-100"
               />
             </form>
           </>
