@@ -24,7 +24,7 @@ export default function Search({ kitchens }: SearchProps) {
   }, [kitchens, input]);
 
   return (
-    <form class="group relative w-full max-w-xl z-10">
+    <section class="group relative w-full max-w-xl z-10">
       <div class="relative z-10 flex items-center border(black 2) rounded-lg px-6 bg-white">
         <label for="search">
           <IconSearch class="relative w-6 h-6" />
@@ -37,22 +37,29 @@ export default function Search({ kitchens }: SearchProps) {
           onInput={handleOnInput}
           placeholder="Search restaurant name, address..."
           disabled={!IS_BROWSER}
+          maxLength={100}
         />
       </div>
-      {input !== "" && searchResults.length > 0 && (
+      {input !== "" && (
         <ul class="absolute pt-8 left-0 right-0 top-8 max-h-64 overflow-hidden w-full bg-white rounded-lg border(black 2)">
-          {searchResults.map((result, i) => (
-            <li key={i}>
-              <a
-                href={`/${result.slug}`}
-                class="hover:bg-gray-100 text-sm md:text-base block px-6 py-4"
-              >
-                {result.name}
-              </a>
+          {searchResults.length > 0 ? (
+            searchResults.map((result, i) => (
+              <li key={i}>
+                <a
+                  href={`/${result.slug}`}
+                  class="hover:bg-gray-100 text-sm md:text-base block px-6 py-4"
+                >
+                  {result.name}
+                </a>
+              </li>
+            ))
+          ) : (
+            <li class="text-sm md:text-base block px-6 py-4">
+              No Results Found
             </li>
-          ))}
+          )}
         </ul>
       )}
-    </form>
+    </section>
   );
 }
