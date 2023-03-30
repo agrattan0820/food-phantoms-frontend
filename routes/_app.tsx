@@ -7,6 +7,7 @@ export default function App({ Component }: AppProps) {
       <Head>
         <title>Food Phantoms</title>
         <link rel="stylesheet" href={asset("/global.css")} />
+        <link rel="shortcut icon" href={asset("/ghost_favicon.png")} />
       </Head>
       <div class="font-sans">
         <Component />
