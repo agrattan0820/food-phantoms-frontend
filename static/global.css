@@ -3,6 +3,10 @@
  animation: float 4s ease-in-out infinite;
 }
 
+.search-input::placeholder {
+ color: black;
+}
+
 @keyframes float {
  0% {
   transform: translatey(0);

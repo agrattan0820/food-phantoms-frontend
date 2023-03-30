@@ -30,12 +30,13 @@ export default function Search({ kitchens }: SearchProps) {
           <IconSearch class="relative w-6 h-6" />
         </label>
         <input
-          class="relative w-full px-4 py-3 md:text-2xl outline-none"
+          class="relative w-full px-4 py-3 md:text-2xl outline-none search-input"
           type="text"
           id="search"
           name="search"
           value={input}
           onInput={handleOnInput}
+          placeholder="Search restaurant name, address..."
           disabled={!IS_BROWSER}
         />
       </div>
