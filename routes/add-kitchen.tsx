@@ -105,13 +105,13 @@ export default function Home({ data }: PageProps<Data | null>) {
                 <Input
                   id="doordash_link"
                   name="doordash_link"
-                  type="text"
+                  type="url"
                   required
                 />
               </div>
               <div>
                 <InputLabel for="website_link">Website Link</InputLabel>
-                <Input id="website_link" name="website_link" type="text" />
+                <Input id="website_link" name="website_link" type="url" />
               </div>
               <div>
                 <InputLabel for="parent">Owned and Operated By</InputLabel>

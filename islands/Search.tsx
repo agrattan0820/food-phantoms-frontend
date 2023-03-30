@@ -30,7 +30,7 @@ export default function Search({ kitchens }: SearchProps) {
           <IconSearch class="relative w-6 h-6" />
         </label>
         <SearchInput
-          type="text"
+          type="search"
           id="search"
           name="search"
           value={input}
