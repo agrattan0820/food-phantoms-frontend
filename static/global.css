@@ -7,6 +7,22 @@
  color: black;
 }
 
+.search-input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50rem;
+  background: url(https://pro.fontawesome.com/releases/v5.10.0/svgs/solid/times-circle.svg) no-repeat 50% 50%;
+  background-size: contain;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.search-input:focus::-webkit-search-cancel-button {
+  opacity: .3;
+  pointer-events: all;
+}
+
 @keyframes float {
  0% {
   transform: translatey(0);

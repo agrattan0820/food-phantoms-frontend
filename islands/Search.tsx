@@ -35,7 +35,7 @@ export default function Search({ kitchens }: SearchProps) {
           name="search"
           value={input}
           onInput={handleOnInput}
-          placeholder="Search restaurant name, address..."
+          placeholder="Search restaurant name..."
           disabled={!IS_BROWSER}
           maxLength={100}
         />
