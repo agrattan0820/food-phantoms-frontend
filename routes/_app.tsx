@@ -9,7 +9,7 @@ export default function App({ Component }: AppProps) {
         <link rel="stylesheet" href={asset("/global.css")} />
         <link rel="shortcut icon" href={asset("/ghost_favicon.png")} />
       </Head>
-      <div class="font-sans">
+      <div class="font-sans text-gray-900">
         <Component />
       </div>
     </html>
