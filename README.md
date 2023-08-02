@@ -1,4 +1,5 @@
-# fresh project
+# Food Phantoms Frontend 👻
+> Backend is located at https://github.com/agrattan0820/food-phantoms-api
 
 ### Usage
 
